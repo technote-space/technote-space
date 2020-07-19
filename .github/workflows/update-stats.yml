@@ -1,0 +1,52 @@
+on:
+  schedule:
+    - cron: 10 17 * * *
+  repository_dispatch:
+    types: [update-stats]
+  workflow_dispatch:
+
+name: Update stats
+jobs:
+  update:
+    name: Update stats
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - name: Save stats
+        run: |
+          echo "::set-env name=commit_flag::1"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+      - name: Save stats
+        if: "! env.commit_flag"
+        run: |
+          echo "::set-env name=commit_flag::1"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+      - name: Save stats
+        if: "! env.commit_flag"
+        run: |
+          echo "::set-env name=commit_flag::1"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+      - name: Setup git
+        if: env.commit_flag
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Git add changes
+        if: env.commit_flag
+        run: |
+          git add stats.svg
+          diff=$(git status --short -uno | grep -e '^[MAD]' || :)
+          if [ -z "${diff}" ]; then echo "::set-env name=commit_flag::0"; fi
+      - name: Git commit
+        if: env.commit_flag
+        run: |
+          git commit -qm "chore: update stats"
+          git show --stat-count=10 HEAD
+      - name: Git push
+        if: env.commit_flag
+        run: |
+          git push origin "HEAD":"master"
