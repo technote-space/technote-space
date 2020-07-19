@@ -17,19 +17,19 @@ jobs:
         run: |
           echo "::set-env name=commit_flag::1"
           curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
-          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::"; fi
       - name: Save stats
         if: "! env.commit_flag"
         run: |
           echo "::set-env name=commit_flag::1"
           curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
-          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::"; fi
       - name: Save stats
         if: "! env.commit_flag"
         run: |
           echo "::set-env name=commit_flag::1"
           curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true"
-          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::0"; fi
+          if cat stats.svg | grep -q "NO_RESPONSE_FROM_FUNCTION"; then echo "::set-env name=commit_flag::"; fi
       - name: Setup git
         if: env.commit_flag
         run: |
@@ -40,7 +40,7 @@ jobs:
         run: |
           git add stats.svg
           diff=$(git status --short -uno | grep -e '^[MAD]' || :)
-          if [ -z "${diff}" ]; then echo "::set-env name=commit_flag::0"; fi
+          if [ -z "${diff}" ]; then echo "::set-env name=commit_flag::"; fi
       - name: Git commit
         if: env.commit_flag
         run: |
