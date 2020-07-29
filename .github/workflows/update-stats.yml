@@ -66,7 +66,7 @@ jobs:
         if: env.commit_flag2
         run: |
           git add langs.svg
-      - name: Git add changes
+      - name: Check diff
         if: env.commit_flag1 || env.commit_flag2
         run: |
           diff=$(git status --short -uno | grep -e '^[MAD]' || :)
