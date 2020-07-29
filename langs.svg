@@ -1,0 +1,106 @@
+
+    <svg width="350" height="170" viewBox="0 0 350 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #2f80ed }
+        .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #333 }
+      </style>
+      <rect data-testid="card-bg" x="0.5" y="0.5" width="99.7%" height="99%" rx="4.5" fill="#fffefe" stroke="#E4E2E2"/>
+
+      <text data-testid="header" x="25" y="35" class="header">Most Used Languages</text>
+
+      <svg data-testid="lang-items" x="25" y="55">
+        
+      <mask id="rect-mask">
+        <rect x="0" y="0" width="300" height="8" fill="white" rx="5" />
+      </mask>
+      
+          <rect
+            mask="url(#rect-mask)" 
+            data-testid="lang-progress"
+            x="0" 
+            y="0"
+            width="140.80" 
+            height="8"
+            fill="#4F5D95"
+          />
+        
+          <rect
+            mask="url(#rect-mask)" 
+            data-testid="lang-progress"
+            x="140.8" 
+            y="0"
+            width="106.59" 
+            height="8"
+            fill="#2b7489"
+          />
+        
+          <rect
+            mask="url(#rect-mask)" 
+            data-testid="lang-progress"
+            x="247.39000000000001" 
+            y="0"
+            width="40.02" 
+            height="8"
+            fill="#f1e05a"
+          />
+        
+          <rect
+            mask="url(#rect-mask)" 
+            data-testid="lang-progress"
+            x="287.41" 
+            y="0"
+            width="17.78" 
+            height="8"
+            fill="#2c3e50"
+          />
+        
+          <rect
+            mask="url(#rect-mask)" 
+            data-testid="lang-progress"
+            x="295.19" 
+            y="0"
+            width="14.809999999999999" 
+            height="8"
+            fill="#89e051"
+          />
+        
+      
+    <g transform="translate(0, 25)">
+      <circle cx="5" cy="6" r="5" fill="#4F5D95" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        PHP 46.93%
+      </text>
+    </g>
+  
+    <g transform="translate(150, 25)">
+      <circle cx="5" cy="6" r="5" fill="#2b7489" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        TypeScript 35.53%
+      </text>
+    </g>
+  
+    <g transform="translate(0, 50)">
+      <circle cx="5" cy="6" r="5" fill="#f1e05a" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        JavaScript 13.34%
+      </text>
+    </g>
+  
+    <g transform="translate(150, 50)">
+      <circle cx="5" cy="6" r="5" fill="#2c3e50" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Vue 2.59%
+      </text>
+    </g>
+  
+    <g transform="translate(0, 75)">
+      <circle cx="5" cy="6" r="5" fill="#89e051" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        Shell 1.60%
+      </text>
+    </g>
+  
+    
+      </svg>
+    </svg>
+  
