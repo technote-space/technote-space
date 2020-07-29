@@ -5,3 +5,4 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Technote's github stats](https://raw.githubusercontent.com/technote-space/technote-space/master/stats.svg)
+![Top Langs](https://raw.githubusercontent.com/technote-space/technote-space/master/langs.svg)
