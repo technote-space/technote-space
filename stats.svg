@@ -65,7 +65,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 13.443688699368384;
+        stroke-dashoffset: 6.139151072992449;
       }
     }
   
@@ -123,7 +123,7 @@
     </svg>
   
       <text class="stat bold" x="25" y="12.5">Total Commits:</text>
-      <text class="stat" x="135" y="12.5" data-testid="commits">17.9k</text>
+      <text class="stat" x="135" y="12.5" data-testid="commits">22.4k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
