@@ -1,15 +1,59 @@
 
-    <svg width="350" height="170" viewBox="0 0 350 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <style>
-        .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #2f80ed }
-        .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #333 }
-      </style>
-      <rect data-testid="card-bg" x="0.5" y="0.5" width="99.7%" height="99%" rx="4.5" fill="#fffefe" stroke="#E4E2E2"/>
+      <svg
+        width="350"
+        height="170"
+        viewBox="0 0 350 170"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <style>
+          .header {
+            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            fill: #2f80ed;
+            animation: fadeInAnimation 0.8s ease-in-out forwards;
+          }
+          
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #333 }
+  
 
-      <text data-testid="header" x="25" y="35" class="header">Most Used Languages</text>
+          
+        </style>
 
-      <svg data-testid="lang-items" x="25" y="55">
+        <rect
+          data-testid="card-bg"
+          x="0.5"
+          y="0.5"
+          rx="4.5"
+          height="99%"
+          stroke="#E4E2E2"
+          width="349"
+          fill="#fffefe"
+          stroke-opacity="1"
+        />
+
         
+      <g
+        data-testid="card-title"
+        transform="translate(25, 35)"
+      >
+        <g transform="translate(0, 0)">
+      <text
+        x="0"
+        y="0"
+        class="header"
+        data-testid="header"
+      >Most Used Languages</text>
+    </g>
+      </g>
+    
+
+        <g
+          data-testid="main-card-body"
+          transform="translate(0, 55)"
+        >
+          
+    <svg data-testid="lang-items" x="25">
+      
       <mask id="rect-mask">
         <rect x="0" y="0" width="300" height="8" fill="white" rx="5" />
       </mask>
@@ -101,6 +145,8 @@
     </g>
   
     
-      </svg>
     </svg>
   
+        </g>
+      </svg>
+    
