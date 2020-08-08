@@ -63,7 +63,7 @@
             data-testid="lang-progress"
             x="0" 
             y="0"
-            width="137.90" 
+            width="137.69" 
             height="8"
             fill="#4F5D95"
           />
@@ -71,9 +71,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="137.9" 
+            x="137.69" 
             y="0"
-            width="109.54" 
+            width="109.84" 
             height="8"
             fill="#2b7489"
           />
@@ -81,9 +81,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="247.44" 
+            x="247.53" 
             y="0"
-            width="39.76" 
+            width="39.70" 
             height="8"
             fill="#f1e05a"
           />
@@ -91,9 +91,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="287.2" 
+            x="287.23" 
             y="0"
-            width="17.62" 
+            width="17.61" 
             height="8"
             fill="#2c3e50"
           />
@@ -101,9 +101,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="294.82" 
+            x="294.84000000000003" 
             y="0"
-            width="15.18" 
+            width="15.17" 
             height="8"
             fill="#89e051"
           />
@@ -112,21 +112,21 @@
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 45.97%
+        PHP 45.90%
       </text>
     </g>
   
     <g transform="translate(150, 25)">
       <circle cx="5" cy="6" r="5" fill="#2b7489" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 36.51%
+        TypeScript 36.61%
       </text>
     </g>
   
     <g transform="translate(0, 50)">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 13.25%
+        JavaScript 13.23%
       </text>
     </g>
   
@@ -140,7 +140,7 @@
     <g transform="translate(0, 75)">
       <circle cx="5" cy="6" r="5" fill="#89e051" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Shell 1.73%
+        Shell 1.72%
       </text>
     </g>
   
