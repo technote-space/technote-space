@@ -1,0 +1,82 @@
+on:
+  schedule:
+    - cron: 10 17 * * *
+  repository_dispatch:
+    types: [update-stats]
+  workflow_dispatch:
+
+name: Update stats
+jobs:
+  update:
+    name: Update stats
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - name: Save stats
+        run: |
+          echo "::set-env name=commit_flag1::"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+      - name: Save stats
+        if: "! env.commit_flag1"
+        run: |
+          sleep 2
+          echo "::set-env name=commit_flag1::"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+      - name: Save stats
+        if: "! env.commit_flag1"
+        run: |
+          sleep 2
+          echo "::set-env name=commit_flag1::"
+          curl -sS -o stats.svg "https://github-readme-stats.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+
+      - name: Save lang
+        run: |
+          echo "::set-env name=commit_flag2::"
+          curl -sS -o langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+      - name: Save lang
+        if: "! env.commit_flag2"
+        run: |
+          sleep 2
+          echo "::set-env name=commit_flag2::"
+          curl -sS -o langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+      - name: Save lang
+        if: "! env.commit_flag2"
+        run: |
+          sleep 2
+          echo "::set-env name=commit_flag2::"
+          curl -sS -o langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+
+      - name: Setup git
+        if: env.commit_flag1 || env.commit_flag2
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Git add changes
+        if: env.commit_flag1
+        run: |
+          git add stats.svg
+      - name: Git add changes
+        if: env.commit_flag2
+        run: |
+          git add langs.svg
+      - name: Check diff
+        if: env.commit_flag1 || env.commit_flag2
+        run: |
+          diff=$(git status --short -uno | grep -e '^[MAD]' || :)
+          if [ -n "${diff}" ]; then echo "::set-env name=commit_flag::1"; fi
+      - name: Git commit
+        if: env.commit_flag
+        run: |
+          git commit -qm "chore: update stats"
+          git show --stat-count=10 HEAD
+      - name: Git push
+        if: env.commit_flag
+        run: |
+          git push origin "HEAD":"master"
