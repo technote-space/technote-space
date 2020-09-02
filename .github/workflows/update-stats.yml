@@ -16,41 +16,41 @@ jobs:
       - name: Save stats
         run: |
           echo "::set-env name=commit_flag1::"
-          curl -sS -o stats.svg "https://github-readme-stats-chi-mauve.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
           if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 2
           echo "::set-env name=commit_flag1::"
-          curl -sS -o stats.svg "https://github-readme-stats-chi-mauve.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
           if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 2
           echo "::set-env name=commit_flag1::"
-          curl -sS -o stats.svg "https://github-readme-stats-chi-mauve.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
+          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
           if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
 
       - name: Save lang
         run: |
           echo "::set-env name=commit_flag2::"
-          curl -sS -o langs.svg "https://github-readme-stats-chi-mauve.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
           if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
           echo "::set-env name=commit_flag2::"
-          curl -sS -o langs.svg "https://github-readme-stats-chi-mauve.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
           if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
           echo "::set-env name=commit_flag2::"
-          curl -sS -o langs.svg "https://github-readme-stats-chi-mauve.vercel.app/api/top-langs/?username=technote-space&layout=compact"
+          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
           if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
 
       - name: Setup git
