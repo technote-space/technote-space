@@ -15,43 +15,43 @@ jobs:
       - uses: actions/checkout@v2
       - name: Save stats
         run: |
-          echo "::set-env name=commit_flag1::"
+          echo "commit_flag1=" >> $GITHUB_ENV
           curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
-          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+          if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 2
-          echo "::set-env name=commit_flag1::"
+          echo "commit_flag1=" >> $GITHUB_ENV
           curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
-          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+          if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 2
-          echo "::set-env name=commit_flag1::"
+          echo "commit_flag1=" >> $GITHUB_ENV
           curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true"
-          if cat stats.svg | grep -q "svg"; then echo "::set-env name=commit_flag1::1"; fi
+          if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
 
       - name: Save lang
         run: |
-          echo "::set-env name=commit_flag2::"
+          echo "commit_flag2=" >> $GITHUB_ENV
           curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
-          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+          if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
-          echo "::set-env name=commit_flag2::"
+          echo "commit_flag2=" >> $GITHUB_ENV
           curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
-          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+          if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
-          echo "::set-env name=commit_flag2::"
+          echo "commit_flag2=" >> $GITHUB_ENV
           curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact"
-          if cat langs.svg | grep -q "svg"; then echo "::set-env name=commit_flag2::1"; fi
+          if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
 
       - name: Setup git
         if: env.commit_flag1 || env.commit_flag2
@@ -70,7 +70,7 @@ jobs:
         if: env.commit_flag1 || env.commit_flag2
         run: |
           diff=$(git status --short -uno | grep -e '^[MAD]' || :)
-          if [ -n "${diff}" ]; then echo "::set-env name=commit_flag::1"; fi
+          if [ -n "${diff}" ]; then echo "commit_flag=1" >> $GITHUB_ENV; fi
       - name: Git commit
         if: env.commit_flag
         run: |
