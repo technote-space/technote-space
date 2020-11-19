@@ -65,7 +65,7 @@
             data-testid="lang-progress"
             x="0" 
             y="0"
-            width="132.31" 
+            width="132.28" 
             height="8"
             fill="#4F5D95"
           />
@@ -73,9 +73,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="132.31" 
+            x="132.28" 
             y="0"
-            width="109.16" 
+            width="109.20" 
             height="8"
             fill="#2b7489"
           />
@@ -83,9 +83,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="241.47" 
+            x="241.48000000000002" 
             y="0"
-            width="38.73" 
+            width="38.72" 
             height="8"
             fill="#f1e05a"
           />
@@ -93,9 +93,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="280.2" 
+            x="280.20000000000005" 
             y="0"
-            width="12.50" 
+            width="12.49" 
             height="8"
             fill="#3572A5"
           />
@@ -103,7 +103,7 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="292.7" 
+            x="292.69000000000005" 
             y="0"
             width="17.31" 
             height="8"
@@ -114,14 +114,14 @@
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 44.10%
+        PHP 44.09%
       </text>
     </g>
   
     <g transform="translate(150, 25)">
       <circle cx="5" cy="6" r="5" fill="#2b7489" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 36.39%
+        TypeScript 36.40%
       </text>
     </g>
   
@@ -135,7 +135,7 @@
     <g transform="translate(150, 50)">
       <circle cx="5" cy="6" r="5" fill="#3572A5" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Python 4.17%
+        Python 4.16%
       </text>
     </g>
   
