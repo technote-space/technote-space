@@ -65,7 +65,7 @@
             data-testid="lang-progress"
             x="0" 
             y="0"
-            width="132.23" 
+            width="132.13" 
             height="8"
             fill="#4F5D95"
           />
@@ -73,9 +73,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="132.23" 
+            x="132.13" 
             y="0"
-            width="110.71" 
+            width="110.85" 
             height="8"
             fill="#2b7489"
           />
@@ -83,9 +83,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="242.94" 
+            x="242.98" 
             y="0"
-            width="37.28" 
+            width="37.25" 
             height="8"
             fill="#f1e05a"
           />
@@ -93,9 +93,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="280.22" 
+            x="280.23" 
             y="0"
-            width="12.48" 
+            width="12.47" 
             height="8"
             fill="#3572A5"
           />
@@ -105,7 +105,7 @@
             data-testid="lang-progress"
             x="292.70000000000005" 
             y="0"
-            width="17.3" 
+            width="17.29" 
             height="8"
             fill="#2c3e50"
           />
@@ -114,21 +114,21 @@
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 44.08%
+        PHP 44.04%
       </text>
     </g>
   
     <g transform="translate(150, 25)">
       <circle cx="5" cy="6" r="5" fill="#2b7489" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 36.90%
+        TypeScript 36.95%
       </text>
     </g>
   
     <g transform="translate(0, 50)">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 12.43%
+        JavaScript 12.42%
       </text>
     </g>
   
