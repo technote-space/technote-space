@@ -21,14 +21,14 @@ jobs:
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
-          sleep 2
+          sleep 10
           echo "commit_flag1=" >> $GITHUB_ENV
           curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
           if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
-          sleep 2
+          sleep 15
           echo "commit_flag1=" >> $GITHUB_ENV
           curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
           if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
