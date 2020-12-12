@@ -65,7 +65,7 @@
             data-testid="lang-progress"
             x="0" 
             y="0"
-            width="130.66" 
+            width="130.59" 
             height="8"
             fill="#4F5D95"
           />
@@ -73,9 +73,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="130.66" 
+            x="130.59" 
             y="0"
-            width="112.92" 
+            width="113.02" 
             height="8"
             fill="#2b7489"
           />
@@ -83,9 +83,9 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="243.57999999999998" 
+            x="243.61" 
             y="0"
-            width="36.87" 
+            width="36.85" 
             height="8"
             fill="#f1e05a"
           />
@@ -93,7 +93,7 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="280.45" 
+            x="280.46000000000004" 
             y="0"
             width="12.33" 
             height="8"
@@ -103,7 +103,7 @@
           <rect
             mask="url(#rect-mask)" 
             data-testid="lang-progress"
-            x="292.78" 
+            x="292.79" 
             y="0"
             width="17.21" 
             height="8"
@@ -114,21 +114,21 @@
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#4F5D95" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PHP 43.55%
+        PHP 43.53%
       </text>
     </g>
   
     <g transform="translate(150, 25)">
       <circle cx="5" cy="6" r="5" fill="#2b7489" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 37.64%
+        TypeScript 37.67%
       </text>
     </g>
   
     <g transform="translate(0, 50)">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 12.29%
+        JavaScript 12.28%
       </text>
     </g>
   
