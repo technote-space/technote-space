@@ -16,41 +16,41 @@ jobs:
       - name: Save stats
         run: |
           echo "commit_flag1=" >> $GITHUB_ENV
-          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
+          curl -sS -o stats.svg "https://github-readme-stats-technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
           if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 10
           echo "commit_flag1=" >> $GITHUB_ENV
-          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
+          curl -sS -o stats.svg "https://github-readme-stats-technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
           if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
       - name: Save stats
         if: "! env.commit_flag1"
         run: |
           sleep 15
           echo "commit_flag1=" >> $GITHUB_ENV
-          curl -sS -o stats.svg "https://github-readme-stats.technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
+          curl -sS -o stats.svg "https://github-readme-stats-technote-space.vercel.app/api?username=technote-space&show_icons=true&count_private=true&theme=algolia"
           if cat stats.svg | grep -q "svg"; then echo "commit_flag1=1" >> $GITHUB_ENV; fi
 
       - name: Save lang
         run: |
           echo "commit_flag2=" >> $GITHUB_ENV
-          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
+          curl -sS -o langs.svg "https://github-readme-stats-technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
           if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
           echo "commit_flag2=" >> $GITHUB_ENV
-          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
+          curl -sS -o langs.svg "https://github-readme-stats-technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
           if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
       - name: Save lang
         if: "! env.commit_flag2"
         run: |
           sleep 2
           echo "commit_flag2=" >> $GITHUB_ENV
-          curl -sS -o langs.svg "https://github-readme-stats.technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
+          curl -sS -o langs.svg "https://github-readme-stats-technote-space.vercel.app/api/top-langs/?username=technote-space&layout=compact&theme=algolia"
           if cat langs.svg | grep -q "svg"; then echo "commit_flag2=1" >> $GITHUB_ENV; fi
 
       - name: Setup git
