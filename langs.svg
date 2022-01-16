@@ -82,7 +82,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="168.37"
+          width="168.38"
           height="8"
           fill="#2b7489"
         />
@@ -90,9 +90,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="168.37"
+          x="168.38"
           y="0"
-          width="84.18"
+          width="84.17"
           height="8"
           fill="#4F5D95"
         />
@@ -131,7 +131,7 @@
     <g transform="translate(0, 25)">
       <circle cx="5" cy="6" r="5" fill="#2b7489" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 56.12%
+        TypeScript 56.13%
       </text>
     </g>
   
