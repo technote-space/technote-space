@@ -54,7 +54,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 79.32758121027544;
+        stroke-dashoffset: 79.29179819078225;
       }
     }
   
@@ -107,7 +107,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Technote's GitHub Stats</text>
+      >Takahashi's GitHub Stats</text>
     </g>
       </g>
     
